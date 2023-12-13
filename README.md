@@ -14,13 +14,13 @@ ToDoApp/
 ├── app.py
 ├── requirements.txt
 ├── templates/
-│   ├── base.html
-│   ├── index.html
-│   ├── about.html
-│   └── update.html
+│ ├── base.html
+│ ├── index.html
+│ ├── about.html
+│ └── update.html
 ├── Dockerfile
 └── env/
-    └── (Virtual environment - optional)
+└── (Virtual environment - optional)
 
 - **`app.py`**: Contains the Flask application code.
 - **`requirements.txt`**: Includes Python dependencies.
