@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}ToDoApp - Home{% endblock %}
+
+{% block content %}
+    {% if alert_message %}
+        <div class="alert alert-danger" role="alert">
+            {{ alert_message }}
+        </div>
+        <meta http-equiv="refresh" content="1;url=/">
+    {% endif %}
+
+    <h1>ToDoApp</h1>
+    <form action="/add" method="post">
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" class="form-control" id="title" name="title" placeholder="Title" required>
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <input type="text" class="form-control" id="description" name="description" placeholder="Description" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Todo</button>
+    </form>
+
+    <table class="table mt-4">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for todo in todos %}
+            <tr>
+                <td>{{ todo.title }}</td>
+                <td>{{ todo.description }}</td>
+                <td>
+                    <a href="/update/{{ todo.id }}" class="btn btn-sm btn-info">Update</a>
+                    <a href="/delete/{{ todo.id }}" class="btn btn-sm btn-danger">Delete</a>
+                    <!-- <a href="/delete/{{ todo.id }}" onclick="return confirm('Are you sure you want to delete this todo?')" class="btn btn-sm btn-danger">Delete</a> -->
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
