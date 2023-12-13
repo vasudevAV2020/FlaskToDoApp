@@ -23,6 +23,7 @@ ToDoApp/
 └── env/
 └── (Virtual environment - optional)
     ```
+
 - **`app.py`**: Contains the Flask application code.
 - **`requirements.txt`**: Includes Python dependencies.
 - **`templates/`**: Contains HTML templates for the application.
