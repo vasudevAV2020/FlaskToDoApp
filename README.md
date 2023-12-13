@@ -9,21 +9,6 @@ This is a simple ToDo application built with Flask.
 - Navigate between home, about, and update pages.
 
 ## Folder Structure
-"""
-ToDoApp/
-│
-├── app.py
-├── requirements.txt
-├── templates/
-│ ├── base.html
-│ ├── index.html
-│ ├── about.html
-│ └── update.html
-├── Dockerfile
-└── env/
-└── (Virtual environment - optional)
-"""
-
 - **`app.py`**: Contains the Flask application code.
 - **`requirements.txt`**: Includes Python dependencies.
 - **`templates/`**: Contains HTML templates for the application.
