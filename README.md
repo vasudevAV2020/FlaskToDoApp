@@ -9,7 +9,7 @@ This is a simple ToDo application built with Flask.
 - Navigate between home, about, and update pages.
 
 ## Folder Structure
-```bash
+"""
 ToDoApp/
 │
 ├── app.py
@@ -22,7 +22,7 @@ ToDoApp/
 ├── Dockerfile
 └── env/
 └── (Virtual environment - optional)
-    ```
+"""
 
 - **`app.py`**: Contains the Flask application code.
 - **`requirements.txt`**: Includes Python dependencies.
