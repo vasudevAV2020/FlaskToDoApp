@@ -52,8 +52,8 @@ This is a simple ToDo application built with Flask.
     python app.py
 
     # Build and run the Docker container (if Docker installed)
-    docker build -t ToDoApp .
-    docker run -p 5000:5000 ToDoApp
+    docker build -t toDoApp .
+    docker run -p 5000:5000 toDoApp
     ```
 
 5. Access the application in a web browser at `http://localhost:5000`.
