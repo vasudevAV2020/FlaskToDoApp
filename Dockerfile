@@ -7,18 +7,16 @@ WORKDIR /todoapp
 # Copy only requirements file
 COPY requirements.txt .
 
-# Install Python dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+# Create and activate virtual environment, install dependencies, and run the application
+RUN python -m venv env && \
+    /bin/bash -c "source env/bin/activate && pip install --no-cache-dir -r requirements.txt"
 
-# Copy the entire application into the container
-COPY . .
+# Copy only necessary application files into the container
+COPY app.py /todoapp/
+COPY templates/ /todoapp/templates/
 
 # Expose the port that your Flask app is running on (change 5000 to your port if different)
 EXPOSE 5000
 
-# Set environment variables
-ENV FLASK_APP=app.py
-ENV FLASK_RUN_HOST=0.0.0.0
-
-# Command to run the application
-CMD ["python", "app.py"]
+# Command to activate virtual environment and run the application
+CMD /bin/bash -c "source env/bin/activate && python app.py"
