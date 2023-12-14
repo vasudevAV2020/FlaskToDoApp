@@ -1,12 +1,14 @@
-# Use the official Python image as base image
+# Use a lightweight base image
 FROM python:3.9-slim
 
 # Set the working directory in the container
-WORKDIR /app
+WORKDIR /todoapp
 
-# Copy the requirements file into the container and install dependencies
-COPY requirements.txt requirements.txt
-RUN pip install -r requirements.txt
+# Copy only requirements file
+COPY requirements.txt .
+
+# Install Python dependencies
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the entire application into the container
 COPY . .
