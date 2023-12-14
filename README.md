@@ -20,14 +20,14 @@ This is a simple ToDo application built with Flask.
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your_username/ToDoApp.git
+    git clone https://github.com/vasudevAV2020/FlaskToDoApp.git
     ```
 
 2. Set up the virtual environment (optional):
 
     ```bash
     # Navigate to the project directory
-    cd ToDoApp
+    cd FlaskToDoApp
 
     # Create a virtual environment (optional)
     python -m venv env
